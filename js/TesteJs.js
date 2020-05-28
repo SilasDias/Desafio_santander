@@ -453,7 +453,7 @@ console.log(posicao)
 
 var diasDeTrabalho = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira"]
 var umDia = diasDeTrabalho.indexOf ("segunda-feira"); // retorna 0
-console.log(umDia) */
+console.log(umDia) 
 
 
 contem([1, 6, 7, 6], 7);
@@ -462,4 +462,29 @@ function contem(array, numero){
     var busca = vetor.indexOf(numero);
     return busca >= 0;
 }
-console.log(contem)
+console.log(contem) 
+
+var mesesDoAno = [1,2];
+console.log(mesesDoAno[48]) //undefined 
+
+function medalhaDeAcordoComPosto(numero){
+    var posicao = ["nada","ouro","prata","bronze"];
+    if (numero >= posicao.length){
+        return posicao[0];
+    }
+    return posicao[numero];
+}
+medalhaDeAcordoComPosto(1); */
+
+
+//Em julho ganhou $ 50, em agosto perdeu $ 12, etc.
+var lucroUltimoSemestre = [50, -12, 1000, 300, 200, 0];
+function somaLucroSemestre(umSemestre) {
+    return umSemestre[0] + umSemestre[1] +
+          umSemestre[2] + umSemestre[3] +
+          umSemestre[4] + umSemestre[5];
+  }
+  console.log(somaLucroSemestre)
+
+  //Em janeiro a empresa faturou $80, em fevereiro, $453, em março $1.000
+var lucrosPrimeiroTrimestre = [80, 453, 1000];
