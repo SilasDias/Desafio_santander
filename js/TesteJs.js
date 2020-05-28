@@ -474,7 +474,7 @@ function medalhaDeAcordoComPosto(numero){
     }
     return posicao[numero];
 }
-medalhaDeAcordoComPosto(1); */
+medalhaDeAcordoComPosto(1); 
 
 
 //Em julho ganhou $ 50, em agosto perdeu $ 12, etc.
@@ -487,4 +487,105 @@ function somaLucroSemestre(umSemestre) {
   console.log(somaLucroSemestre)
 
   //Em janeiro a empresa faturou $80, em fevereiro, $453, em março $1.000
-var lucrosPrimeiroTrimestre = [80, 453, 1000];
+var lucrosPrimeiroTrimestre = [80, 453, 1000]; 
+
+function lucroTotal0(umPeriodo) {
+    var soma = 0;
+    return soma;
+  }
+  console.log(lucroTotal0) 
+
+  function lucroTotal1(umPeriodo) {
+    var soma = 0;
+    soma = soma + umPeriodo[0];
+    return soma;
+  }
+  console.log(lucroTotal1)
+
+  function lucroTotal4(umPeriodo) {
+    var soma = 0;
+    soma = soma + umPeriodo[0];
+    soma = soma + umPeriodo[1];
+    soma = soma + umPeriodo[2];
+    soma = soma + umPeriodo[3];
+    return soma ;
+  } 
+
+function lucroTotal(umPeriodo) {
+    var soma= 0;
+    var mes = 0;
+    for (var i=0; i<umPeriodo.length; i++) {
+      mes = umPeriodo[i];
+      soma= soma+ mes;
+    }
+    return soma;
+}
+console.log(lucroTotal([]))
+console.log(lucroTotal([100]))
+console.log(lucroTotal([100, 2]))
+console.log(lucroTotal([2, 10, -20]))
+console.log(lucroTotal([2, 10, -20, 0, 0, 10, 10])) 
+
+function quantidadeDeMesesComLucro(umPeriodo) {
+    var quantidade= 0;
+    var soma= 0;
+    var total = 0;
+    for (let mes=0; mes< umPeriodo.length; mes++) {
+        soma = umPeriodo[mes];
+        total= total+ mes;
+        if (soma > 0){
+            quantidade ++;
+        }
+    }
+    return quantidade;
+  }
+console.log(quantidadeDeMesesComLucro([]))
+console.log(quantidadeDeMesesComLucro([100]))
+console.log(quantidadeDeMesesComLucro([100, 2]))
+console.log(quantidadeDeMesesComLucro([2, 10, -20]))
+console.log(quantidadeDeMesesComLucro([2, 10, -20, 0, 0, 10, 10])) 
+
+function quantidadeDeMesesComPerda(umPeriodo) {
+    var quantidade= 0;
+    var soma= 0;
+    var total = 0;
+    for (let mes=0; mes< umPeriodo.length; mes++) {
+        soma = umPeriodo[mes];
+        if (soma < 0){
+            quantidade ++;
+        }
+    }
+    return quantidade;
+  }
+console.log(quantidadeDeMesesComPerda([]))
+console.log(quantidadeDeMesesComPerda([100]))
+console.log(quantidadeDeMesesComPerda([100, 2]))
+console.log(quantidadeDeMesesComPerda([2, 10, -20]))
+console.log(quantidadeDeMesesComPerda([2, 10, -20, 0, 0, 10, 10])) 
+
+function saldoDeMesesComLucro(umPeriodo) {
+    var quantidade= [];
+    var soma= 0;
+    for (let mes=0; mes< umPeriodo.length; mes++) {
+        soma = umPeriodo[mes];
+        if (soma > 0){
+            quantidade.push(umPeriodo[mes]);
+        }
+    }
+    return quantidade;
+  }
+  console.log(saldoDeMesesComLucro([100, 20, 0, -10, 10]))
+  console.log(saldoDeMesesComLucro([1])) */
+
+  function naipeDeTruco(naipe) {
+    var proxima = [];
+    for (var i = 1; i <= 12; i++) {
+      if (i == 8) {
+        i = i + 1;
+      } else {
+        proxima.push(i + " de " + naipe);
+      }
+    }
+    return proxima;
+  }
+  console.log(naipeDeTruco("espadas"))
