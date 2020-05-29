@@ -589,3 +589,16 @@ function saldoDeMesesComLucro(umPeriodo) {
     return proxima;
   }
   console.log(naipeDeTruco("espadas"))
+
+  var alunosDaSegunda = [10, -5, 3, 0];
+  function acontece(dia,quant){
+      var aberturas = [];
+      for(var i=0; i<dia.length; i++){
+        var recebeDia = dia[i];
+        if (recebeDia <= 0){
+            aberturas.push(recebeDia);
+        }
+      }
+      return aberturas;
+  }
+  console.log(aberturas)
