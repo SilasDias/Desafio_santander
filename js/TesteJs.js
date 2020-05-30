@@ -625,7 +625,7 @@ function saldoDeMesesComLucro(umPeriodo) {
       return acum;
   }
   
-  console.log(produto([1, 4, 7])) //28 */
+  console.log(produto([1, 4, 7])) //28 
 
   function fatorial(num){
       var acum = 1;
@@ -634,4 +634,23 @@ function saldoDeMesesComLucro(umPeriodo) {
       }
       return acum;
   }
-  console.log(fatorial(5)) //120
+  console.log(fatorial(5)) //120 */
+
+  function acontece(dia,quant){
+    var vetor = [];
+    for(var i=0; i<dia.length; i++){
+      var recebeDia = dia[i];
+      if (recebeDia <= 0){
+          vetor.push(recebeDia);
+      }
+    }
+    return vetor.length >= quant;
+}
+
+function aberturas(semana,minima){
+    var vetorDias = [];
+    for(var i=0; i<semana.length; i++){
+        vetorDias.push(acontece(semana[i],minima));
+        }
+      return vetorDias;
+    }
