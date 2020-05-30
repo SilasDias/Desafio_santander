@@ -617,4 +617,12 @@ function saldoDeMesesComLucro(umPeriodo) {
   console.log(aberturas([alunosDaSegunda, alunosDaTerça, alunosDaQuarta], 2)) */
 
 
-  produto([1, 4, 7]) //28
+  function produto(num){
+      var acum = 1;
+      for(var i=0; i <num.length; i++){
+          acum = acum * num[i];
+      }
+      return acum;
+  }
+  
+  console.log(produto([1, 4, 7])) //28
