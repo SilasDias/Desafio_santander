@@ -614,7 +614,7 @@ function saldoDeMesesComLucro(umPeriodo) {
         }
       return vetorDias;
     }
-  console.log(aberturas([alunosDaSegunda, alunosDaTerça, alunosDaQuarta], 2)) */
+  console.log(aberturas([alunosDaSegunda, alunosDaTerça, alunosDaQuarta], 2)) 
 
 
   function produto(num){
@@ -625,4 +625,13 @@ function saldoDeMesesComLucro(umPeriodo) {
       return acum;
   }
   
-  console.log(produto([1, 4, 7])) //28
+  console.log(produto([1, 4, 7])) //28 */
+
+  function fatorial(num){
+      var acum = 1;
+      for(var i=num; i>0; i--){
+          acum = acum * i;
+      }
+      return acum;
+  }
+  console.log(fatorial(5)) //120
