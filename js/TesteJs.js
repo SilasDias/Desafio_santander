@@ -575,7 +575,7 @@ function saldoDeMesesComLucro(umPeriodo) {
     return quantidade;
   }
   console.log(saldoDeMesesComLucro([100, 20, 0, -10, 10]))
-  console.log(saldoDeMesesComLucro([1])) */
+  console.log(saldoDeMesesComLucro([1])) 
 
   function naipeDeTruco(naipe) {
     var proxima = [];
@@ -588,17 +588,33 @@ function saldoDeMesesComLucro(umPeriodo) {
     }
     return proxima;
   }
-  console.log(naipeDeTruco("espadas"))
+  console.log(naipeDeTruco("espadas")) 
 
   var alunosDaSegunda = [10, -5, 3, 0];
+  var alunosDaTerça = [10, 5, 3, 0];
+  var alunosDaQuarta = [10, -5, 3, 0];
   function acontece(dia,quant){
-      var aberturas = [];
+      var vetor = [];
       for(var i=0; i<dia.length; i++){
         var recebeDia = dia[i];
         if (recebeDia <= 0){
-            aberturas.push(recebeDia);
+            vetor.push(recebeDia);
         }
       }
-      return aberturas;
+      return vetor.length >= quant;
   }
-  console.log(aberturas)
+  console.log(acontece(alunosDaSegunda, 2)) 
+
+
+  
+  function aberturas(semana,minima){
+    var vetorDias = [];
+    for(var i=0; i<semana.length; i++){
+        vetorDias.push(acontece(semana[i],minima));
+        }
+      return vetorDias;
+    }
+  console.log(aberturas([alunosDaSegunda, alunosDaTerça, alunosDaQuarta], 2)) */
+
+
+  produto([1, 4, 7]) //28
