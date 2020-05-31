@@ -636,21 +636,37 @@ function saldoDeMesesComLucro(umPeriodo) {
   }
   console.log(fatorial(5)) //120 */
 
-  function acontece(dia,quant){
-    var vetor = [];
+  function maisMenos(dia){
+    var vetorResultado = [];
+    var negativo = 0;
+    var positivo = 0;
+    var zero = 0;
+    var vetorNegativo = 0;
+    var vetorPositivo = 0;
+    var vetorZero = 0;
     for(var i=0; i<dia.length; i++){
       var recebeDia = dia[i];
-      if (recebeDia <= 0){
-          vetor.push(recebeDia);
-      }
+      if (recebeDia < 0){
+          negativo++;
+        } else if(recebeDia == 0){
+            zero++;
+            } else {
+                positivo++;
+            }
     }
-    return vetor.length >= quant;
-}
+    vetorNegativo = (100 * negativo/ dia.length) / 100;
+    vetorZero = (100 * zero / dia.length) / 100;
+    vetorPositivo = (100 * positivo / dia.length) / 100;
+    vetorResultado.push(vetorPositivo, vetorZero,vetorNegativo);
 
-function aberturas(semana,minima){
+    return vetorResultado;
+}
+console.log(maisMenos([1, 2, 0, -1]))
+
+/*function aberturas(semana,minima){
     var vetorDias = [];
     for(var i=0; i<semana.length; i++){
         vetorDias.push(acontece(semana[i],minima));
         }
       return vetorDias;
-    }
+    } */
