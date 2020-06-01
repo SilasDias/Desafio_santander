@@ -634,7 +634,7 @@ function saldoDeMesesComLucro(umPeriodo) {
       }
       return acum;
   }
-  console.log(fatorial(5)) //120 */
+  console.log(fatorial(5)) //120
 
   function maisMenos(dia){
     var vetorResultado = [];
@@ -661,12 +661,45 @@ function saldoDeMesesComLucro(umPeriodo) {
 
     return vetorResultado;
 }
-console.log(maisMenos([1, 2, 0, -1]))
+console.log(maisMenos([1, 2, 0, -1])) 
 
-/*function aberturas(semana,minima){
-    var vetorDias = [];
-    for(var i=0; i<semana.length; i++){
-        vetorDias.push(acontece(semana[i],minima));
+function escada(num){
+    var degrau = "#";
+    var vetorEscada = [];
+    for(var i=1; i<=num; i++){
+        vetorEscada.push(degrau = " ".repeat(num-i) + "#".repeat(i));
+    }
+    return vetorEscada;
+}
+console.log(escada(5)) 
+
+function alturaArvoreUtopica(ciclos){
+    var arvore = 1;
+    for(var i=0; i<ciclos; i++){
+       if(i & 1){
+            arvore *= 2;
+            } else {
+                arvore += 1;
         }
-      return vetorDias;
-    } */
+    }
+    return arvore;
+}
+console.log(alturaArvoreUtopica(3))
+
+
+
+function alturaArvoreUtopica(ciclos){
+    var arvore = 1
+    for(var i = 0; i < ciclos; i++){
+      if(i % 2){
+        arvore += 1;
+      }else{
+        arvore *= 2;
+      }
+    }
+    return arvore
+  }
+console.log(alturaArvoreUtopica(0));
+console.log(alturaArvoreUtopica(1));
+console.log(alturaArvoreUtopica(2));
+console.log(alturaArvoreUtopica(3)); */
